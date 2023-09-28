@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Image, Text, View, TouchableOpacity, ScrollView, TextInput, ActivityIndicator } from 'react-native';
 import axios from '../../axios.js';
+import { getDatabase, ref, get } from 'firebase/database'
 
 export default function App({ navigation }) {
   const [eventos, setEventos] = useState([]);
@@ -13,8 +14,8 @@ export default function App({ navigation }) {
       const list = axios.converter(res.data);
       setEventos(list);
       setIsLoading(false)
-    }, []);
-  });
+    });
+  }, []);
 
   useEffect(() => {
     const eventosFiltrados = eventos.filter((evento) =>
@@ -22,7 +23,7 @@ export default function App({ navigation }) {
     );
     setEventosFiltrados(eventosFiltrados);
   }, [filtro, eventos]);
-  
+
 
   return (
     <ScrollView>
