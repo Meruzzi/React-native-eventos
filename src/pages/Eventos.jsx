@@ -22,6 +22,7 @@ export default function App({ navigation }) {
     );
     setEventosFiltrados(eventosFiltrados);
   }, [filtro, eventos]);
+  
 
   return (
     <ScrollView>
