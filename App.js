@@ -8,7 +8,6 @@ import Inicio from './src/pages/Inicio'
 import Eventos from './src/pages/Eventos'
 import Detalhes from './src/pages/Detalhes.jsx'
 import Voos from './src/pages/Voos'
-import NovoEvento from './src/pages/NovoEvento'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -21,7 +20,6 @@ function EventosBottomNavigation({ route }) {
     <Tab.Navigator>
       <Tab.Screen name="Detalhes" component={Detalhes} initialParams={{evento: evento}} options={{headerShown: false}} />
       <Tab.Screen name="Voos" component={Voos} options={{headerShown: false}} initialParams={{evento: evento}} />
-      <Tab.Screen name="Novo Evento" component={NovoEvento} options={{headerShown: false}} />
     </Tab.Navigator>
   )
 }

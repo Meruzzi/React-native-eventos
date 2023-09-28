@@ -1,5 +1,4 @@
-import { StyleSheet, Text, Platform, View, Card, Button, Image, Linking } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StyleSheet, Text, View, Button, Image, Linking } from 'react-native';
 
 export default function Inicio() {
     return (
@@ -11,9 +10,9 @@ export default function Inicio() {
                 <Text style={styles.texto}>Acesse seus eventos, obtenha informações, imagens, filtre entre elas e muito mais!</Text>
                 <View style={{ paddingTop: 30 }}>
                     <Text style={styles.texto}>Site criado por: Gabriel Meruzzi</Text>
-                    <Button title='GitHub' onPress={() => {Linking.openURL("https://github.com/Meruzzi")}} />
+                    <Button title='GitHub' onPress={() => { Linking.openURL("https://github.com/Meruzzi") }} />
+                </View>
             </View>
-        </View>
         </View >
     )
 }
@@ -32,5 +31,6 @@ const styles = StyleSheet.create({
     },
     informacoesInicio: {
         paddingTop: 20,
-    },
+        padding: 5,
+    }
 })

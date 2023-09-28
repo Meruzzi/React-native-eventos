@@ -28,11 +28,11 @@ export default function App({ navigation }) {
       <View style={styles.container}>
         <TextInput
           style={styles.input}
-          placeholder="Filtrar por nome do evento"
+          placeholder="Pesquise um evento"
           onChangeText={(text) => setFiltro(text)}
         />
         {isLoading ? (
-          <ActivityIndicator size="large" /> // Corrigido o erro aqui
+          <ActivityIndicator size="large" />
         ) : (
           eventosFiltrados.map((evento, index) => (
             <TouchableOpacity
